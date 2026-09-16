@@ -204,34 +204,7 @@ This is the inbound lead that triggered the workflow.
 
 ---
 
-# 8. Demo GIF / Video
-
-## Workflow Demo GIF
-
-Add the final GIF here after recording the workflow:
-
-```text
-[ADD GIF HERE]
-```
-
-Recommended GIF sequence:
-
-```text
-Gmail lead
-    ↓
-Run python main.py
-    ↓
-Gemini analysis
-    ↓
-Structured output
-    ↓
-Gmail draft
-```
-
-
----
-
-# 9. How It Works
+# 8. How It Works
 
 ### Step 1 — Find Website Leads
 
@@ -270,7 +243,7 @@ The agent does **not** send the email.
 
 ---
 
-# 10. Human-in-the-Loop Safety
+# 9. Human-in-the-Loop Safety
 
 A key design decision was:
 
@@ -302,7 +275,7 @@ The prompt also instructs Gemini not to invent pricing, product capabilities, ti
 
 ---
 
-# 11. Duplicate Protection
+# 10. Duplicate Protection
 
 The script stores processed Gmail message IDs in:
 
@@ -316,7 +289,7 @@ For a production system, this state could be moved to a persistent datastore. Fo
 
 ---
 
-# 12. Project Structure
+# 11. Project Structure
 
 ```text
 ai-lead-response-agent-gemini/
@@ -332,14 +305,14 @@ ai-lead-response-agent-gemini/
 │   ├── 02-gmail-draft.png
 │   └── 03-incoming-lead.png
 │
-├── credentials.json        # local only — do not commit
-├── token.json              # generated locally — do not commit
+├── credentials.json        # local only 
+├── token.json              # generated locally 
 └── processed_ids.json      # generated locally
 ```
 
 ---
 
-# 13. Setup
+# 12. Setup
 
 ## Requirements
 
@@ -368,7 +341,7 @@ GEMINI_API_KEY=YOUR_GEMINI_API_KEY
 GEMINI_MODEL=gemini-3.7-flash
 ```
 
-Do not put the API key in source code or screenshots.
+
 
 ## Configure Gmail
 
@@ -378,7 +351,7 @@ The first execution opens Google's OAuth flow. After authorization, a local `tok
 
 ---
 
-# 14. Running the Agent
+# 13. Running the Agent
 
 Run:
 
@@ -417,7 +390,7 @@ Created Gmail draft: XXXXX
 
 ---
 
-# 15. Model Fallback During Development
+# 14. Model Fallback During Development
 
 The model is configurable through:
 
@@ -433,7 +406,7 @@ This illustrates why the model layer should remain replaceable in an AI workflow
 
 ---
 
-# 16. Other Capability / Pain Pairings
+# 15. Other Capability / Pain Pairings
 
 | AI Capability | Business Pain | Possible Workflow |
 |---|---|---|
@@ -447,7 +420,7 @@ I chose lead response automation because it has a short feedback loop and the fi
 
 ---
 
-# 17. Future Improvements
+# 16. Future Improvements
 
 If this prototype were moved toward production, I would consider:
 
@@ -462,32 +435,7 @@ If this prototype were moved toward production, I would consider:
 
 ---
 
-# 18. Security Notes
-
-Never commit the following files:
-
-```text
-.env
-credentials.json
-token.json
-```
-
-Add them to `.gitignore` before pushing the repository.
-
-Example `.gitignore` entries:
-
-```gitignore
-.env
-credentials.json
-token.json
-processed_ids.json
-__pycache__/
-.venv/
-```
-
----
-
-# 19. Final Result
+# 17. Final Result
 
 The completed workflow takes an inbound lead such as:
 
@@ -512,12 +460,10 @@ The salesperson then reviews the draft before sending it.
 
 ---
 
-# 20. Repository / Submission Links
-
-**GitHub Repository:** [ADD GITHUB LINK HERE]
+# 18. Repository / Submission Links
 
 
-**Demo GIF:** See the Demo GIF section above.
+**Demo GIF:** See the Demo GIF Below In Summary Section.
 
 ---
 
